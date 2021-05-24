@@ -1,5 +1,16 @@
+import styles from '/styles/Home.module.css';
+import Navbar from "../comps/navbar";
+import Footer from "../comps/footer";
 export default function activites() {
   return (
-    <h1>Activités !</h1>
+    <div className={styles.container}>
+    <Navbar/>
+    <main className={styles.main}>
+    <h1>Activitées</h1>
+    </main>
+    <footer className={styles.footer}>
+      <Footer />
+    </footer>
+    </div>
   );
 }

@@ -2,15 +2,22 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link'
+import Navbar from '/pages/comps/navbar';
+import Footer from '/pages/comps/footer';
+
+
 
 export default function Home() {
   return (
     <div className={styles.container}>
+    
       {' '}
       <Head>
         <title>Coding Cartel</title>
         <meta name="description" content="Coding Cartel" />
       </Head>
+      
+      <Navbar/>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -22,7 +29,7 @@ export default function Home() {
           C'est une description
         </p>
         
-<div><Image src="/logodefault.png" alt="Logo" width={300} height={300} /></div>
+
         <div className={styles.grid}>
 
           <Link href="/vision" > 
@@ -32,14 +39,14 @@ export default function Home() {
           </a>
           </Link>
 
-          <Link href="/projets/index" > 
+          <Link href="/projets" > 
           <a className={styles.card}>
             <h2>Projets &rarr;</h2>
             <p>Voir les différents projets du Coding Cartel</p>
           </a>
           </Link>
 
-          <Link href="/activites/index" > 
+          <Link href="/activites" > 
           <a className={styles.card}>
             <h2>Activités &rarr;</h2>
             <p>Voir les différentes activitées du Coding Cartel</p>
@@ -56,18 +63,7 @@ export default function Home() {
       </main>
 {/* NOTE : Create footer/header components and reuse them everywhere*/}
       <footer className={styles.footer}>
-
-      <Link href="/contact"> 
-          <a>
-            <h2>Contact</h2>
-          </a>
-          </Link>
-
-          <Link href="/contact"> 
-          <a>
-            <h2>à propos</h2>
-          </a>
-          </Link>
+          <Footer />
       </footer>
     </div>
   );
