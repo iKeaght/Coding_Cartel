@@ -1,0 +1,11 @@
+{
+  "./pages/*.{js,jsx}": [
+    "eslint --fix"
+  ],
+  "./database/*.{js,jsx}": [
+    "eslint --fix"
+  ],
+  "./styles/*.css": [
+    "npx stylelint --fix"
+  ]
+}

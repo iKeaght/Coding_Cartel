@@ -7,11 +7,14 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "lint": "eslint ./pages/** ./styles/** ./models/** ./tests/** ./*.js --fix",
+    "eslint": "eslint ./pages/** ./models/** ./tests/** ./*.js --fix",
+    "stylelint": "npx stylelint ./styles/** --fix",
+    "lint": "npm-s eslint stylelint",
     "db:create:dev": "npx sequelize db:create --env=\"development\"",
     "db:create:test": "npx sequelize db:create --env=\"test\"",
     "db:create:prod": "npx sequelize db:create --env=\"production\"",
-    "db:create:all": "npm-run-all db:create:dev db:create:test db:create:prod"
+    "db:create:all": "npm-run-all db:create:dev db:create:test db:create:prod",
+    "prepare": "husky install"
   },
   "dependencies": {
     "mysql2": "^2.2.5",
@@ -41,6 +44,9 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.0",
     "sequelize-cli": "^6.2.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
     "tailwindcss": "^2.1.2"
   }
 }
