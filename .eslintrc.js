@@ -25,6 +25,7 @@ module.exports = {
     'prettier',
     'import',
     'jsx-a11y',
+    'css-modules',
   ],
   rules: {
     'indent': ['error', 2],
@@ -50,5 +51,6 @@ module.exports = {
         'prettier/prettier': ['error', {}, { usePrettierrc: true }],
       },
     },
+    { files: ['**/*.css'], extends: ['plugin:css-modules/recommended'] },
   ],
 };

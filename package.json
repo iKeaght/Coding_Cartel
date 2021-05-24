@@ -5,9 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest",
+    "lint": "eslint ./pages/** ./styles/** ./models/** ./tests/** ./*.js --fix",
+    "db:create:dev": "npx sequelize db:create --env=\"development\"",
+    "db:create:test": "npx sequelize db:create --env=\"test\"",
+    "db:create:prod": "npx sequelize db:create --env=\"production\"",
+    "db:create:all": "npm-run-all db:create:dev db:create:test db:create:prod"
   },
   "dependencies": {
+    "mysql2": "^2.2.5",
     "next": "10.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -15,9 +22,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
+    "dotenv": "^10.0.0",
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-css-modules": "^2.11.0",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
@@ -27,7 +36,11 @@
     "jest": "^26.6.3",
     "lint-staged": "^11.0.0",
     "postcss": "^8.2.15",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-nested": "^5.0.5",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.0",
+    "sequelize-cli": "^6.2.0",
     "tailwindcss": "^2.1.2"
   }
 }
