@@ -1,5 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default (req, res) => {
-  res.status(200).json({ name: 'John Doe' });
+function mockApiResult() {
+  return { name: 'John Doe' };
+}
+
+module.exports = {
+  default: (req, res) => {
+    res.status(200).json(mockApiResult());
+  },
+  mockApiResult,
 };

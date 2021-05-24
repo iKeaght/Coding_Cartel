@@ -1,0 +1,16 @@
+const path = require('path');
+const environment = extractParam('--env=') || 'development';
+require('dotenv').config({ path: path.resolve(`.env.${environment}`) });  // Useful for sequelizeConfig.js
+
+// Extracts the content of the specified parameter from the arguments given with the command
+function extractParam(paramName) {
+  return process.argv.filter((paramString) => paramString.startsWith(paramName))
+                     .map((paramString) => paramString.substring(paramName.length));
+}
+
+module.exports = {
+  'config': path.resolve('config', 'sequelizeConfig.js'),
+  'models-path': path.resolve('models'),
+  'seeders-path': path.resolve('seeders'),
+  'migrations-path': path.resolve('migrations'),
+};
