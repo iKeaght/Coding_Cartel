@@ -40,6 +40,7 @@ module.exports = {
     'react/jsx-filename-extension': ['warn', { 'extensions': ['.js', '.jsx'] }],
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
   },
   overrides: [
     {

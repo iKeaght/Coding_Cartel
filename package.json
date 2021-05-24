@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "eslint": "eslint ./pages/** ./models/** ./tests/** ./*.js --fix",
+    "eslint": "eslint ./pages/*.js ./database/** ./tests/** ./*.js --fix",
     "stylelint": "npx stylelint ./styles/** --fix",
     "lint": "npm-s eslint stylelint",
     "db:create:dev": "npx sequelize db:create --env=\"development\"",
