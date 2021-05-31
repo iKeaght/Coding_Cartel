@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   development: {
     username: process.env.DB_USER,
@@ -7,8 +5,7 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     dialect: 'mysql',
-    migrationStorage: 'json',
-    migrationStoragePath: path.resolve('database', 'sequelizeMeta.json'),
+    define: { charset: 'utf8', dialectOptions: { collate: 'utf8_general_ci' } },
   },
   test: {
     username: process.env.DB_USER,
@@ -16,6 +13,7 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     dialect: 'mysql',
+    define: { charset: 'utf8', dialectOptions: { collate: 'utf8_general_ci' } },
   },
   production: {
     username: process.env.DB_USER,
@@ -23,5 +21,6 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     dialect: 'mysql',
+    define: { charset: 'utf8', dialectOptions: { collate: 'utf8_general_ci' } },
   },
 };

@@ -9,7 +9,12 @@ const basename = path.basename(__filename);
 const env = { ...process.env };
 const database = {};
 const sequelize = new Sequelize(env.DB_NAME, env.DB_USER, env.DB_PASS,
-  { host: env.DB_HOST, port: env.DB_PORT, dialect: 'mysql' });
+  {
+    host: env.DB_HOST,
+    port: env.DB_PORT,
+    dialect: 'mysql',
+    define: { charset: 'utf8', dialectOptions: { collate: 'utf8_general_ci' } },
+  });
 
 fs
   .readdirSync(__dirname)

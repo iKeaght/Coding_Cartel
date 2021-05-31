@@ -41,6 +41,9 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
+    'no-plusplus': 'off',
+    'no-await-in-loop': 'off',
+    'max-len': 'off',
   },
   overrides: [
     {

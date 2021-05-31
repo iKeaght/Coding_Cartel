@@ -1,11 +1,11 @@
 {
-  "./pages/*.{js,jsx}": [
-    "eslint --fix"
+  "./pages/**/*.{js,jsx}": [
+    "eslint --fix --max-warnings 0"
   ],
-  "./database/*.{js,jsx}": [
-    "eslint --fix"
+  "./database/**/*.js": [
+    "eslint --fix --max-warnings 0"
   ],
-  "./styles/*.css": [
-    "npx stylelint --fix"
+  "./styles/**/*.css": [
+    "npx stylelint --fix --max-warnings 0"
   ]
 }
