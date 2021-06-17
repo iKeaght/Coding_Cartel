@@ -1,6 +1,6 @@
 module.exports = {
   plugins: {
-    // Default NextJS configuration
+    'tailwindcss': {},
     'postcss-flexbugs-fixes': {},
     'postcss-preset-env': {
       autoprefixer: {
@@ -11,9 +11,7 @@ module.exports = {
         'custom-properties': false,
       },
     },
-    // End default
-    'tailwindcss': {},
-    'autoprefixer': {},
     'postcss-nested': {},
+    'autoprefixer': {},
   },
 };

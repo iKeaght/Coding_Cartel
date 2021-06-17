@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/oswald/Oswald-Variable-Font.ttf');
+  }
+}
+
 :root {
   --light-gray: #6b6e70;
   --gray: #474b4f;
   --dark-gray: #222629;
   --light-green: #86c232;
   --dark-green: #61892f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
