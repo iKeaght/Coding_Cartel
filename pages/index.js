@@ -7,18 +7,16 @@ import Footer from './components/footer';
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Navbar />
 
-      {' '}
       <Head>
         <title>Coding Cartel</title>
         <meta name="description" content="Coding Cartel" />
       </Head>
 
-      <Navbar />
-
       <main className={styles.main}>
         <h1 className={styles.title}>
-          {' '}
+
           Bienvenue sur le site du Coding Cartel
         </h1>
 
@@ -27,7 +25,6 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-
           <Link href="/vision">
             <a className={styles.card}>
               <h2>Vision &rarr;</h2>
