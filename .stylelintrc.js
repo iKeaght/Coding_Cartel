@@ -9,5 +9,6 @@ module.exports = {
         },
         ],
         'declaration-block-trailing-semicolon': "always", // Ensure there is a semi-colon at the end of a declaration block
+        'no-empty-source': null,
     },
 };
