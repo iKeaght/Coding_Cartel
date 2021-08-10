@@ -17,10 +17,10 @@ function getLinks() {
 
 const Navbar = () => (
   <header>
-    <nav className="bg-gray-dark text-green-light w-full flex items-center justify-center py-3 mx-auto">
+    <nav className="bg-gray-dark text-green-light flex items-center justify-center py-3 mx-auto">
       <div className="logo flex items-center">
-        <Image src="/logodefault.png" alt="Logo" width={32} height={32} className="inline-block" />
-        <h1 className="text-white inline-block">Coding Cartel</h1>
+        <Image src="/logo.png" alt="Logo" width={32} height={32} className="inline-block" />
+        <h1 className="text-white inline-block ml-1 sm:ml-2">Coding Cartel</h1>
       </div>
       { getLinks() }
     </nav>
