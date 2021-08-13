@@ -5,7 +5,8 @@ module.exports = {
         'at-rule-no-unknown': [
         true,
         {
-            ignoreAtRules: ['tailwind', 'apply', 'variants', 'responsive', 'screen', 'layer'], // Stylelint won't flag if it finds any of these strings
+            // Stylelint won't flag if it finds any of these strings
+            ignoreAtRules: ['tailwind', 'apply', 'variants', 'responsive', 'screen', 'layer', 'extend', 'define-placeholder'],
         },
         ],
         'declaration-block-trailing-semicolon': "always", // Ensure there is a semi-colon at the end of a declaration block

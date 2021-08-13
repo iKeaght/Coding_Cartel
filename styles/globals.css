@@ -32,7 +32,7 @@ html, body {
 }
 
 main {
-  padding-top: 2%;
+  padding-top: 2rem;
   min-height: 90vh;
   min-width: 100%;
 }
