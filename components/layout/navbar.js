@@ -17,10 +17,9 @@ function getLinks() {
 }
 
 function toggleMobileMenu() {
-  document.getElementById('mobileMenu').classList.toggle('invisible');
-  document.getElementById('mobileMenu').classList.toggle('visible');
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+  // document.getElementById('mobileMenu').classList.toggle('visible');
   document.getElementById('mobileMenu').classList.toggle('h-0');
-  document.getElementById('mobileMenu').classList.toggle('h-full');
 }
 
 const Navbar = () => (
@@ -39,7 +38,7 @@ const Navbar = () => (
         </svg>
       </button>
     </nav>
-    <div className="flex flex-col justify-center items-center sm:hidden bg-gray-dark text-green-light py-2 invisible h-0" id="mobileMenu">
+    <div className="flex flex-col justify-center items-center sm:hidden bg-gray-dark text-green-light py-2 hidden h-0" id="mobileMenu">
       { getLinks() }
     </div>
   </header>

@@ -7,7 +7,7 @@ function getLinks() {
   ];
   return links.map((link) => (
     <Link href={link[1]} key={link[1]}>
-      <a className="mx-1">{link[0]}</a>
+      <a className="mx-2">{link[0]}</a>
     </Link>
   )).map((link, index) => ((index !== links.length - 1) ? [link, (<span key={`sep-${link[0]}`}>|</span>)] : link))
     .flat(1);

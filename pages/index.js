@@ -30,7 +30,7 @@ function getLinks() {
 
 export default function Home() {
   return (
-    <div className="flex flex-col align-center justify-center">
+    <div className="flex flex-col align-center justify-center mt-8">
       <div className="text-center">
         <Image src="/logo.png" alt="Logo" width={180} height={232} />
       </div>

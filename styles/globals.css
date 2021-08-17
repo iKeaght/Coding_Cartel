@@ -31,13 +31,24 @@ html, body {
   min-width: 100%;
 }
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
-  padding-top: 2rem;
-  min-height: 90vh;
+  display: flex;
+  flex-grow: 1;
+  min-height: 80vh;
   min-width: 100%;
 }
 
 header, footer {
-  min-height: 5vh;
+  min-height: 8vh;
   min-width: 100%;
+}
+
+footer {
+  margin-top: auto;
 }

@@ -5,13 +5,13 @@ import Footer from '../components/layout/footer';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="app">
       <Head>
         <title>Coding Cartel</title>
         <meta name="description" content="Coding Cartel" />
       </Head>
       <Navbar />
-      <main>
+      <main className="flex justify-center items-center">
         <Component {...pageProps} />
       </main>
       <Footer />
