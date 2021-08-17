@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+
+  & > .logo {
+    justify-content: center;
+  }
+
+  & > .links {
+    justify-content: center;
+    align-self: center;
+  }
+
+  & > .menu {
+    width: 1.4em;
+    height: 1.4em;
+    margin-right: 5%;
+  }
+}
+
+.link {
+  --enlargementPadding: 0.16rem;
+
+  padding-left: var(--enlargementPadding);
+  padding-right: var(--enlargementPadding);
+  padding-top: var(--enlargementPadding);
+  padding-bottom: var(--enlargementPadding);
+
+  &:hover {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
