@@ -52,3 +52,12 @@ header, footer {
 footer {
   margin-top: auto;
 }
+
+.no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

@@ -44,6 +44,8 @@ module.exports = {
     'no-plusplus': 'off',
     'no-await-in-loop': 'off',
     'max-len': 'off',
+    'react/destructuring-assignment': 'off',
+    'class-methods-use-this': 'off',
   },
   overrides: [
     {
