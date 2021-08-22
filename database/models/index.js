@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 
-const basename = path.basename(__filename);
+const basename = path.basename('index.js');
 const env = { ...process.env };
 const database = {};
 const sequelize = new Sequelize(env.DB_NAME, env.DB_USER, env.DB_PASS,
@@ -16,11 +16,13 @@ const sequelize = new Sequelize(env.DB_NAME, env.DB_USER, env.DB_PASS,
     define: { charset: 'utf8', dialectOptions: { collate: 'utf8_general_ci' } },
   });
 
+const modelFile = path.join(process.cwd(), 'database/models');
+
 fs
-  .readdirSync(__dirname)
+  .readdirSync(modelFile)
   .filter((file) => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
   .forEach((file) => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    const model = require(`./${file.slice(0, -3)}`)(sequelize, Sequelize.DataTypes);
     database[model.name] = model;
   });
 

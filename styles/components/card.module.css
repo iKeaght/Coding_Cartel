@@ -1,3 +1,14 @@
-.card {
-  background-color: blue;
+.imageWrapper {
+  position: relative;
+
+  & > div {
+    height: 100%;
+  }
+}
+
+.imgTag {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  font-size: 0.8rem;
 }
