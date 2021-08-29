@@ -25,7 +25,7 @@ const numberOfRandomRows = 7;
 const totalNumberOfRows = numberOfRandomRows + fixedRows.length;
 
 module.exports = {
-  up: async (queryInterface/* , Sequelize */) => {
+  up: async (queryInterface) => {
     await queryInterface.bulkInsert('users', fixedRows);
 
     let firstName;

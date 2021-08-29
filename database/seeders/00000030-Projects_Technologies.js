@@ -1,6 +1,6 @@
 const { totalNumberOfRows: projectsTotalNumberOfRows } = require('./00000015-Projects');
 const { totalNumberOfRows: technologiesTotalNumberOfRows } = require('./00000005-Technologies');
-const { generateRandomTuples } = require('./helper/helper');
+const { generateRandomTuples } = require('../helper/helper');
 
 const fixedRows = [
   { project_id: 1, technology_id: 1 },
@@ -20,7 +20,7 @@ const totalNumberOfRows = numberOfRandomRows + fixedRows.length;
 
 const tableName = 'projects_technologies';
 module.exports = {
-  up: async (queryInterface/* , Sequelize */) => {
+  up: async (queryInterface) => {
     await queryInterface.bulkInsert(tableName, fixedRows);
 
     const tuples = generateRandomTuples(
@@ -38,7 +38,7 @@ module.exports = {
       }], { ignoreDuplicates: true });
     }
   },
-  down: async (queryInterface/* , Sequelize */) => {
+  down: async (queryInterface) => {
     await queryInterface.sequelize.query(`DELETE FROM ${tableName} LIMIT ${totalNumberOfRows}`);
   },
 };

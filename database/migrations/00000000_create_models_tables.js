@@ -1,10 +1,10 @@
 const { sequelize } = require('../models');
 
 module.exports = {
-  up: async (/* queryInterface, Sequelize */) => {
+  up: async () => {
     await sequelize.sync({ force: true, logging: false });
   },
-  down: async (queryInterface/* , Sequelize */) => {
+  down: async (queryInterface) => {
     await queryInterface.dropTable('projects_technologies');
     await queryInterface.dropTable('projects_users');
     await queryInterface.dropTable('activities_users');

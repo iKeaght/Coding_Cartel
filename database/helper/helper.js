@@ -1,3 +1,5 @@
+const slugifyLib = require('slugify');
+
 function generateDate() {
   // Adds or substracts up to one year to the current date
   // (Math.random() - 0.5) --> Permits addition or substraction (~50% ratio)
@@ -41,9 +43,21 @@ function generateRandomTuples(firstNumber = { min: 0, max: 1 }, secondNumber = {
   return possibilities.slice(0, numberOfRandomTuples);
 }
 
+function slugify(stringToSlugify) {
+  return slugifyLib(stringToSlugify, {
+    replacement: '-',
+    remove: /[*+~.()'"!:@,]/g,
+    lower: true,
+    strict: true,
+    locale: 'fr',
+    trim: true,
+  });
+}
+
 module.exports = {
   generateDate,
   generateDateAfter,
   generateRandomIntegerFromZeroTo,
   generateRandomTuples,
+  slugify,
 };

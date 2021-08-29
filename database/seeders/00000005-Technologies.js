@@ -12,7 +12,7 @@ const fixedRows = [
 ];
 
 module.exports = {
-  up: async (queryInterface/* , Sequelize */) => {
+  up: async (queryInterface) => {
     await queryInterface.bulkInsert('technologies', fixedRows);
   },
   down: async (queryInterface, Sequelize) => {

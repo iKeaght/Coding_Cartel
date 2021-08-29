@@ -5,6 +5,6 @@ export default async function projects(req, res) {
     const allProjects = await sequelize.models.Project.findAll();
     res.status(200).json(allProjects);
   } catch (err) {
-    res.status(500);
+    res.status(500).end();
   }
 }

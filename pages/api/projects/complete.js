@@ -5,6 +5,6 @@ export default async function completeProjects(req, res) {
     const projects = await sequelize.models.Project.findAll({ include: sequelize.models.Technology });
     return res.status(200).json(projects);
   } catch (err) {
-    return res.status(500);
+    return res.status(500).end();
   }
 }

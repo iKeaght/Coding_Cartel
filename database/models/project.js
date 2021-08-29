@@ -24,6 +24,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.STRING(80),
     },
+    slug: {
+      allowNull: false,
+      type: DataTypes.STRING(100),
+    },
     description: {
       allowNull: false,
       type: DataTypes.TEXT,
@@ -39,6 +43,10 @@ module.exports = (sequelize, DataTypes) => {
     type: {
       allowNull: false,
       type: DataTypes.STRING(30),
+    },
+    image: {
+      allowNull: true,
+      type: DataTypes.STRING(200),
     },
   },
   {
